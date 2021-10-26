@@ -1,10 +1,10 @@
 from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
 from customers import views
-# from .customers import views? 
-
-# TODO: look into int:pk
 
 urlpatterns = [
   path('customers/', views.customer_list),
   path('customers/<int:pk>/', views.customer_detail),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
