@@ -54,14 +54,10 @@ This project is a minimal version of the app demonstrated in the Django REST fra
 For more information see:
 https://www.django-rest-framework.org/tutorial/quickstart/
 
-The python linters black and flake8 are installed and configured by pre-commit to autoformat files on every commit 
+TODO: The python linters black and flake8 are installed and configured by pre-commit to autoformat files on every commit 
 
 For more information see:
 https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/
-
-The result of this pre-commit hook should be:
-
-![Alt Text](precommit_demo.gif)
 
 ### Libraries
 https://github.com/psf/black
