@@ -1,0 +1,10 @@
+django
+djangorestframework
+# include pur for auto updating dependencies
+pur
+# include pre-commit, black, and flake8 for auto linting on commit
+black
+flake8
+pre-commit
+# include colorama for colored print statements
+colorama

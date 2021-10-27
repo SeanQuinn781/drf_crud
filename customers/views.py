@@ -39,6 +39,8 @@ def customer_detail(request, pk, format=None):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
+
+        customer = Customer.objects.get(pk=pk)
         serializer = CustomerSerializer(customer, data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -46,5 +48,6 @@ def customer_detail(request, pk, format=None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
+        customer = Customer.objects.get(pk=pk)
         customer.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
