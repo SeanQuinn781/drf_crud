@@ -75,10 +75,19 @@ class CustomerPostGet(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(Customer.objects.get().last_name, "J")
 
+        print(
+            Fore.GREEN
+            + "7) Assert that we can delete a customer by ID"
+        )
 
+        url = "http://127.0.0.1:8000/api/customers/1/"
+        response = self.client.delete(url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+    
+"""
 # Using the standard RequestFactory API to create a form POST request
 factory = APIRequestFactory()
 # Make sure we can create a customer using the factory method
 request = factory.post("/api/customers/", {"last_name": "Dianne"})
 assert response.status_code == status.HTTP_200_OK
-request = factory.get("/api/customers/", {"last_name": "Dianne"})
+"""
