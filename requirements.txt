@@ -1,4 +1,5 @@
-django
+requests
+Django
 djangorestframework
 # include pur for auto updating dependencies
 pur
